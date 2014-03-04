@@ -26,5 +26,6 @@ ETAB
 1036	01.09.2009	INJE	HWAT  HWEF    BHPT 350 
 --********************--
 687	01.05.1975	PROD	HLIQ  HWEF    BHPT 10 
+1006	01.06.1997	PROD	HLIQ  HWEF    BHPT 10 
 --********************--
 ENDE

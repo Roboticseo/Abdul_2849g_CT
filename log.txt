@@ -2,4 +2,12 @@
 20140304_1 Geology 20140304. Abd2849.data
 Init of model
 ******************************************************
-
+======================================================
+20140304_2 Geology 20140304. Abd2849.data
+Some corrections
+- added multPV at the boundaries
+- FWL(1168) - WOC(1150) = 18 m
+- 1006 well turn into piezometer
+- changed perf on the 5erm
+1401	1416 > 1401	1411
+******************************************************
