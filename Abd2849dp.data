@@ -6,7 +6,7 @@ DIMENS
   46  25  230 /
 
 EQLDIMS
-4
+6
 /
 
 NODPPM
@@ -113,6 +113,7 @@ SWL(,,116:230) = 0.1
 SWCR = SWL 
 SIGMAV = 0.5
 PERMX(,,116:230) = 3*PERMX
+PORO(,,116:230) = 0.01
 /
 
 PROPS
@@ -243,9 +244,9 @@ eqlnum(,,7:59) = 2 --CT with oil
 eqlnum(,,60:115) = 3 --CT with water
 pvtnum(,,116:230) = pvtnum + 1
 satnum(,,116:230) = satnum + 1
-eqlnum(,,116:121) = 1  --CT with water
-eqlnum(,,122:174) = 4 --CT with oil
-eqlnum(,,175:230) = 3 --CT with water
+eqlnum(,,116:121) = 4  --CT with water
+eqlnum(,,122:174) = 5 --CT with oil
+eqlnum(,,175:230) = 6 --CT with water
 /
 
 SOLUTION
@@ -254,10 +255,18 @@ EQUIL
      1150	138   50    1*     1*    1*    1	1	0	1*   / 
      1150	138   1168    1*     1*    1*    1	1	0	1*   / 
      1150	138   50    1*     1*    1*    1	1	0	1*   / 
-     1150	138   1150    1*     1*    1*    1	1	0	1*   / 
+     1150	138   50    1*     1*    1*    1	1	0	1*   / 
+     1150	138   1168    1*     1*    1*    1	1	0	1*   / 
+     1150	138   50    1*     1*    1*    1	1	0	1*   / 
 /
 
 RSVD
+1150 28.05
+1160 28.05
+/
+1150 28.05
+1160 28.05
+/
 1150 28.05
 1160 28.05
 /
