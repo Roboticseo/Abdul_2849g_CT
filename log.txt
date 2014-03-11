@@ -25,3 +25,15 @@ sigmav = 0.5
 Dualporo perm model has some modeificitaions:
 6 eqldims, fracture_poro = 0.01 (matr poro was).
 ******************************************************
+
+======================================================
+20140311_1 Geology 20140305. Abd2849dp.data
+Dualporo perm model has some modeificitaions:
+PCWmax = 0.60764
+-PCW = 14.02911*28*0.318316*((PORO/ARRKX)^0.5)
++PCW = 0.60764*28*0.318316*((PORO/ARRKX)^0.5)
+-SIGMAV = 0.5
++SIGMAV = 1
+-     1150	138   1168    1*     1*    1*    1	1	0	1*   / 
++     1150	138   1155    1*     1*    1*    1	1	0	1*   / 
+******************************************************
