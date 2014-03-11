@@ -1,5 +1,22 @@
---- D:/BN_work/02_2014/Abdul_2849g/model/Abd2849dp.data	Tue Mar 11 09:50:29 2014
-+++ D:/BN_work/02_2014/Abdul_2849g/model/Abd2849dp2.data	Tue Mar 11 11:20:41 2014
+--- C:/Users/SazonovEO/AppData/Local/Temp/15tQta_Abd2849dp.data	Tue Mar 11 17:39:03 2014
++++ D:/BN_work/02_2014/Abdul_2849g/model/Abd2849dp.data	Tue Mar 11 17:38:48 2014
+@@ -102,11 +102,11 @@
+ PCW = 0.60764*28*0.318316*((PORO/ARRKX)^0.5)
+ PERMY = PERMX
+ PERMZ = 1 * PERMX
+-MULTPV(1:1,1:25,) = 500
+-MULTPV(46:46,1:25,) = 500
+-MULTPV(46:46,1:25,) = 500
+-MULTPV(1:46,25:25,) = 500
+-MULTPV(1:46,1:1,) = 500
++MULTPV(1:1,1:25,) = 100
++MULTPV(46:46,1:25,) = 100
++MULTPV(46:46,1:25,) = 100
++MULTPV(1:46,25:25,) = 100
++MULTPV(1:46,1:1,) = 100
+ PCW(,,116:230) = 0
+ SOWCR(,,116:230) = 0.1
+ SWL(,,116:230) = 0.1
 @@ -114,6 +114,7 @@
  SIGMAV = 1
  PERMX(,,116:230) = 3*PERMX
@@ -8,3 +25,12 @@
  /
  
  PROPS
+@@ -230,7 +231,7 @@
+ ROCK
+  138 5.0E-005 
+ /
+- 138 5.0E-004
++ 138 5.0E-005
+ /
+ 
+ REGIONS
