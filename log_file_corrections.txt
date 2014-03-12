@@ -1,64 +1,22 @@
---- C:/Users/SazonovEO/AppData/Local/Temp/Jseere_Abd2849dp.data	Wed Mar 12 16:45:51 2014
-+++ D:/BN_work/02_2014/Abdul_2849g/model/Abd2849dp.data	Wed Mar 12 16:19:02 2014
-@@ -97,6 +97,7 @@
- NOECHO
- 
- ARITHMETIC
-+PORO = ARRMPORO*PORO 
- PERMX = 0.2000*EXP(35.37000*PORO)
- ARRKX = PERMX 
- SOWCR = 0.3878
-@@ -245,12 +246,12 @@
- pvtnum=1
- satnum=pvtnum 
- fipnum=1
--eqlnum(,,1:6) = 1  --CT with water
-+eqlnum(,,1:6) = 1  --CT with oil
- eqlnum(,,7:59) = 2 --CT with oil
- eqlnum(,,60:115) = 3 --CT with water
- pvtnum(,,116:230) = pvtnum + 1
- satnum(,,116:230) = satnum + 1
--eqlnum(,,116:121) = 4  --CT with water
-+eqlnum(,,116:121) = 4  --CT with oil
- eqlnum(,,122:174) = 5 --CT with oil
- eqlnum(,,175:230) = 6 --CT with water
- /
-@@ -258,10 +259,10 @@
- SOLUTION
- 
- EQUIL
--     1150	138   50    1*     1*    1*    1	1	0	1*   / 
-+     1150	138   1155    1*     1*    1*    1	1	0	1*   / 
-      1150	138   1155    1*     1*    1*    1	1	0	1*   / 
-      1150	138   50    1*     1*    1*    1	1	0	1*   / 
--     1150	138   50    1*     1*    1*    1	1	0	1*   / 
-+     1150	138   1155    1*     1*    1*    1	1	0	1*   / 
-      1150	138   1155    1*     1*    1*    1	1	0	1*   / 
-      1150	138   50    1*     1*    1*    1	1	0	1*   / 
- /
---- C:/Users/SazonovEO/AppData/Local/Temp/YFVwNa_MULTS.inc	Wed Mar 12 16:46:40 2014
-+++ D:/BN_work/02_2014/Abdul_2849g/model/MULTS.inc	Wed Mar 12 16:45:25 2014
-@@ -32,16 +32,16 @@
+--- C:/Users/SazonovEO/AppData/Local/Temp/nJabQb_MULTS.inc	Wed Mar 12 18:44:15 2014
++++ D:/BN_work/02_2014/Abdul_2849g/model/MULTS.inc	Wed Mar 12 18:31:15 2014
+@@ -32,14 +32,14 @@
  ARRMPORO(,,116:230) = 1
  ARRMPCW	=0
  ARRMPCW(,,1:115)=ARRMPCW + 1*block(8852.66675, 22482.39925)	
--ARRMPCW(,,1:115)=ARRMPCW + 1*block(9492.804, 22467.42325)	
-+ARRMPCW(,,1:115)=ARRMPCW + 0.7*block(9492.804, 22467.42325)	
+-ARRMPCW(,,1:115)=ARRMPCW + 0.7*block(9492.804, 22467.42325)	
++ARRMPCW(,,1:115)=ARRMPCW + 2*block(9492.804, 22467.42325)	
  ARRMPCW(,,1:115)=ARRMPCW + 1*block(9851.175, 22427.796)	
--ARRMPCW(,,1:115)=ARRMPCW + 0.85*block(8193.1785, 24341.18225)	
--ARRMPCW(,,1:115)=ARRMPCW + 0.85*block(8628.1535, 24237.27625)	
-+ARRMPCW(,,1:115)=ARRMPCW + 0.7*block(8193.1785, 24341.18225)	
-+ARRMPCW(,,1:115)=ARRMPCW + 0.7*block(8628.1535, 24237.27625)	
+-ARRMPCW(,,1:115)=ARRMPCW + 0.7*block(8193.1785, 24341.18225)	
+-ARRMPCW(,,1:115)=ARRMPCW + 0.7*block(8628.1535, 24237.27625)	
++ARRMPCW(,,1:115)=ARRMPCW + 0.1*block(8193.1785, 24341.18225)	
++ARRMPCW(,,1:115)=ARRMPCW + 0.1*block(8628.1535, 24237.27625)	
  ARRMPCW(,,1:115)=ARRMPCW + 0.0001*block(8986.5245, 24197.649)	
--ARRMPCW(,,1:115)=ARRMPCW + 1*block(9470.80275, 23530.21025)	
--ARRMPCW(,,1:115)=ARRMPCW + 1*block(9060.47875, 23352.34975)	
-+ARRMPCW(,,1:115)=ARRMPCW + 0.7*block(9470.80275, 23530.21025)	
-+ARRMPCW(,,1:115)=ARRMPCW + 0.9*block(9060.47875, 23352.34975)	
- ARRMPCW(,,1:115)=ARRMPCW + 1*block(8294.43425, 23995.13725)	
--ARRMPCW(,,1:115)=ARRMPCW + 0.85*block(8472.29475, 23584.81325)	
--ARRMPCW(,,1:115)=ARRMPCW + 1*block(8766.38675, 23468.5815)	
-+ARRMPCW(,,1:115)=ARRMPCW + 0.7*block(8472.29475, 23584.81325)	
-+ARRMPCW(,,1:115)=ARRMPCW + 0.7*block(8766.38675, 23468.5815)	
+ ARRMPCW(,,1:115)=ARRMPCW + 0.7*block(9470.80275, 23530.21025)	
+-ARRMPCW(,,1:115)=ARRMPCW + 0.9*block(9060.47875, 23352.34975)	
+-ARRMPCW(,,1:115)=ARRMPCW + 1*block(8294.43425, 23995.13725)	
++ARRMPCW(,,1:115)=ARRMPCW + 0.8*block(9060.47875, 23352.34975)	
++ARRMPCW(,,1:115)=ARRMPCW + 0.1*block(8294.43425, 23995.13725)	
+ ARRMPCW(,,1:115)=ARRMPCW + 0.7*block(8472.29475, 23584.81325)	
+ ARRMPCW(,,1:115)=ARRMPCW + 0.7*block(8766.38675, 23468.5815)	
  ARRMPCW(,,1:115)=ARRMPCW + 1*block(9100.10625, 23710.72075)	
- ARRMPCW(,,1:115)=ARRMPCW + 1*block(10481.63675, 23334.72375)	
- ARRMPCW(,,1:115)=ARRMPCW + 1*block(8672.15625, 22111.7025)	
