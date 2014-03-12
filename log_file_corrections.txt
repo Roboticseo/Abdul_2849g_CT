@@ -1,26 +1,22 @@
---- D:/BN_work/02_2014/Abdul_2849g/model/Abd2849.data	Fri Mar 07 16:08:01 2014
-+++ D:/BN_work/02_2014/Abdul_2849g/model/Abd2849_2.data	Fri Mar 07 17:30:27 2014
-@@ -75,11 +75,10 @@
- PERMY = PERMX
- PERMZ = 1 * PERMX
- SWCR = SWL 
--MULTPV(1:1,1:50,) = 500
-+MULTPV(1:1,1:50,) = 1000
- MULTPV(91:91,1:50,) = 500
--MULTPV(91:91,1:50,) = 500
--MULTPV(1:91,50:50,) = 500
--MULTPV(1:91,1:1,) = 500
-+MULTPV(1:91,50:50,) = 1000
-+MULTPV(1:91,1:1,) = 1000
- /
- 
- PROPS
-@@ -205,7 +204,7 @@
- SOLUTION
- 
- EQUIL
--     1150	138   50    1*     1*    1*    1	1	0	1*   / 
-+     1150	138   1168    1*     1*    1*    1	1	0	1*   / 
-      1150	138   1168    1*     1*    1*    1	1	0	1*   / 
+--- C:/Users/SazonovEO/AppData/Local/Temp/lB5Aab_Abd2849.data	Wed Mar 12 09:58:53 2014
++++ D:/BN_work/02_2014/Abdul_2849g/model/Abd2849.data	Tue Mar 11 20:13:57 2014
+@@ -210,16 +210,9 @@
       1150	138   50    1*     1*    1*    1	1	0	1*   / 
  /
+ 
+-RSVD
+-1150 28.05
+-1160 28.05
+-/
+-1150 28.05
+-1160 28.05
+-/
+-1150 28.05
+-1160 28.05
+-/
++RSCONST
++28.05 1 /
++ /
+ 
+ SUMMARY
+ ALL
