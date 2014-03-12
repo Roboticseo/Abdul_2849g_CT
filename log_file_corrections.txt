@@ -20,3 +20,33 @@
  ARRMPCW(,,1:115)=ARRMPCW + 0.7*block(8472.29475, 23584.81325)	
  ARRMPCW(,,1:115)=ARRMPCW + 0.7*block(8766.38675, 23468.5815)	
  ARRMPCW(,,1:115)=ARRMPCW + 1*block(9100.10625, 23710.72075)	
+--- C:/Users/SazonovEO/AppData/Local/Temp/21wPvb_Abd2849dp2.data	Wed Mar 12 19:26:28 2014
++++ D:/BN_work/02_2014/Abdul_2849g/model/Abd2849dp2.data	Wed Mar 12 19:24:56 2014
+@@ -249,12 +249,12 @@
+ pvtnum=1
+ satnum=pvtnum 
+ fipnum=1
+-eqlnum(,,1:6) = 1  --CT with water
++eqlnum(,,1:6) = 1  --CT with oil
+ eqlnum(,,7:59) = 2 --CT with oil
+ eqlnum(,,60:115) = 3 --CT with water
+ pvtnum(,,116:230) = pvtnum + 1
+ satnum(,,116:230) = satnum + 1
+-eqlnum(,,116:121) = 4  --CT with water
++eqlnum(,,116:121) = 4  --CT with oil
+ eqlnum(,,122:174) = 5 --CT with oil
+ eqlnum(,,175:230) = 6 --CT with water
+ /
+@@ -262,10 +262,10 @@
+ SOLUTION
+ 
+ EQUIL
+-     1150	138   50    1*     1*    1*    1	1	0	1*   / 
++     1150	138   1155    1*     1*    1*    1	1	0	1*   / 
+      1150	138   1155    1*     1*    1*    1	1	0	1*   / 
+      1150	138   50    1*     1*    1*    1	1	0	1*   / 
+-     1150	138   50    1*     1*    1*    1	1	0	1*   / 
++     1150	138   1155    1*     1*    1*    1	1	0	1*   / 
+      1150	138   1155    1*     1*    1*    1	1	0	1*   / 
+      1150	138   50    1*     1*    1*    1	1	0	1*   / 
+ /

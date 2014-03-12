@@ -249,12 +249,12 @@ ARITHMETIC
 pvtnum=1
 satnum=pvtnum 
 fipnum=1
-eqlnum(,,1:6) = 1  --CT with water
+eqlnum(,,1:6) = 1  --CT with oil
 eqlnum(,,7:59) = 2 --CT with oil
 eqlnum(,,60:115) = 3 --CT with water
 pvtnum(,,116:230) = pvtnum + 1
 satnum(,,116:230) = satnum + 1
-eqlnum(,,116:121) = 4  --CT with water
+eqlnum(,,116:121) = 4  --CT with oil
 eqlnum(,,122:174) = 5 --CT with oil
 eqlnum(,,175:230) = 6 --CT with water
 /
@@ -262,10 +262,10 @@ eqlnum(,,175:230) = 6 --CT with water
 SOLUTION
 
 EQUIL
-     1150	138   50    1*     1*    1*    1	1	0	1*   / 
+     1150	138   1155    1*     1*    1*    1	1	0	1*   / 
      1150	138   1155    1*     1*    1*    1	1	0	1*   / 
      1150	138   50    1*     1*    1*    1	1	0	1*   / 
-     1150	138   50    1*     1*    1*    1	1	0	1*   / 
+     1150	138   1155    1*     1*    1*    1	1	0	1*   / 
      1150	138   1155    1*     1*    1*    1	1	0	1*   / 
      1150	138   50    1*     1*    1*    1	1	0	1*   / 
 /
