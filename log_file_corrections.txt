@@ -1,36 +1,59 @@
---- C:/Users/SazonovEO/AppData/Local/Temp/15tQta_Abd2849dp.data	Tue Mar 11 17:39:03 2014
-+++ D:/BN_work/02_2014/Abdul_2849g/model/Abd2849dp.data	Tue Mar 11 17:38:48 2014
-@@ -102,11 +102,11 @@
+--- C:/Users/SazonovEO/AppData/Local/Temp/QO0Wae_Abd2849dp.data	Wed Mar 12 11:38:38 2014
++++ D:/BN_work/02_2014/Abdul_2849g/model/Abd2849dp.data	Wed Mar 12 11:27:47 2014
+@@ -67,6 +67,8 @@
+ INCLUDE
+ 'GEOLDP/zcorn.grdecl' / -- grid 
+ 
++INCLUDE
++'MULTS.inc' / -- MULTS
+ 
+ BOX
+ 1	46	1	25	1	115
+@@ -100,8 +102,10 @@
+ SOWCR = 0.3878
+ SWL = MIN(98.2059806 * ((PORO*100)^-2.46377) , 0.6 )
  PCW = 0.60764*28*0.318316*((PORO/ARRKX)^0.5)
++PCW = PCW * ARRMPCW
  PERMY = PERMX
  PERMZ = 1 * PERMX
--MULTPV(1:1,1:25,) = 500
--MULTPV(46:46,1:25,) = 500
--MULTPV(46:46,1:25,) = 500
--MULTPV(1:46,25:25,) = 500
--MULTPV(1:46,1:1,) = 500
-+MULTPV(1:1,1:25,) = 100
-+MULTPV(46:46,1:25,) = 100
-+MULTPV(46:46,1:25,) = 100
-+MULTPV(1:46,25:25,) = 100
-+MULTPV(1:46,1:1,) = 100
- PCW(,,116:230) = 0
- SOWCR(,,116:230) = 0.1
++PERMZ = ARRKZFRAC*PERMZ
+ MULTPV(1:1,1:25,) = 100
+ MULTPV(46:46,1:25,) = 100
+ MULTPV(46:46,1:25,) = 100
+@@ -112,6 +116,7 @@
  SWL(,,116:230) = 0.1
-@@ -114,6 +114,7 @@
+ SWCR = SWL 
  SIGMAV = 1
++SIGMAV(,,1:115) = ARRSIGMA * SIGMAV
  PERMX(,,116:230) = 3*PERMX
  PORO(,,116:230) = 0.01
-+NTG(,,160:230) = 1
+ NTG(,,160:230) = 1
+@@ -261,25 +266,9 @@
+      1150	138   50    1*     1*    1*    1	1	0	1*   / 
  /
  
- PROPS
-@@ -230,7 +231,7 @@
- ROCK
-  138 5.0E-005 
- /
-- 138 5.0E-004
-+ 138 5.0E-005
- /
+-RSVD
+-1150 28.05
+-1160 28.05
+-/
+-1150 28.05
+-1160 28.05
+-/
+-1150 28.05
+-1160 28.05
+-/
+-1150 28.05
+-1160 28.05
+-/
+-1150 28.05
+-1160 28.05
+-/
+-1150 28.05
+-1160 28.05
+-/
++RSCONST
++28.05 1 /
++ /
  
- REGIONS
+ SUMMARY
+ ALL
