@@ -1,7 +1,7 @@
 ETAB
 1010	01.02.1997	PROD	HLIQ  HWEF    BHPT 10 
 --********************--
-1037	01.08.1991	PROD	HLIQ  HWEF    BHPT 10 
+1037	01.08.1991	PROD	HOIL  HWEF    BHPT 10 -- внутрипластовой переток	1522.4-1533 от 13.02.2009
 1037	01.09.2009	INJE	HWAT  HWEF    BHPT 350 
 --********************--
 1035	01.02.1992	PROD	HLIQ  HWEF    BHPT 10 

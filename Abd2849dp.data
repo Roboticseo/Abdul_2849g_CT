@@ -68,6 +68,9 @@ INCLUDE
 'GEOLDP/zcorn.grdecl' / -- grid 
 
 INCLUDE
+'GEOLDP/ARRFRACT.grdecl' / -- where fracture filters in z-direction
+
+INCLUDE
 'MULTS.inc' / -- MULTS
 
 BOX
@@ -120,8 +123,12 @@ SIGMAV = 1
 SIGMAV(,,1:115) = ARRSIGMA * SIGMAV
 PERMX(,,116:230) = 3*PERMX
 PORO(,,116:230) = 0.01
-NTG(,,160:230) = 1
+NTG(,,160:230) = (NTG==0)*((ARRFRACT==1)*1+(ARRFRACT!=1)*0)+(NTG!=0)*NTG
 /
+
+ARITHMETIC
+PERMZ(19:21,12:14,30:34) = (PERMX<5)*0 + (PERMX>=5)*PERMZ -- for well 2230
+ /
 
 PROPS
 DENSITY
