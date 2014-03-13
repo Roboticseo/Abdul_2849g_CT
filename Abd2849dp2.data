@@ -126,6 +126,12 @@ PORO(,,116:230) = 0.01
 NTG(,,160:230) = (NTG==0)*((ARRFRACT==1)*1+(ARRFRACT!=1)*0)+(NTG!=0)*NTG
 /
 
+ARITHMETIC
+PERMX(18:23,12:18,33:56) = PERMX/3 --снизил kx в районе 2230 где ЗОН
+PERMY = PERMX 
+ /
+
+
 PROPS
 DENSITY
 871   1125.0000      1.3 
