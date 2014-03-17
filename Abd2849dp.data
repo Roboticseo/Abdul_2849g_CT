@@ -128,14 +128,13 @@ NTG(,,160:230) = (NTG==0)*((ARRFRACT==1)*1+(ARRFRACT!=1)*0)+(NTG!=0)*NTG
 
 ARITHMETIC
 PERMZ(19:21,12:14,30:34) = (PERMX<5)*0 + (PERMX>=5)*PERMZ -- for well 2230
- /
+PERMX = PERMX * ARRKXFRAC 
+PERMY = PERMX
+/
 
 ARITHMETIC
-KRWR = 0.0547381
-KRWR(,,116:230) = 0.05474
-KRWR(,,1:115) = KRWR(,,116:230)
-KRWR(,,33:56) = ARRKRWR * KRWR
-KRWR(,,148:171) = ARRKRWR * KRWR-- уменьшаем скорость прихода воды в 2230, так как по
+NTG(,,33:56) = (ARRNOTCOLL<=0.85)*0 + NTG*(ARRNOTCOLL>0.85)
+NTG(,,148:171) = (ARRNOTCOLL<=0.85)*0 + NTG*(ARRNOTCOLL>0.85)-- убираем ЗОН в 2230 (в матрице и трещинах), так как по
 -- нижнему прослою - вероятнее всего ЗОН, и поэтому там мало, что фильтруется. 
 -- Тем более вода
  /
