@@ -71,6 +71,9 @@ INCLUDE
 'GEOLDP/ARRFRACT.grdecl' / -- where fracture filters in z-direction
 
 INCLUDE
+'GEOLDP/ARRFRACT2.grdecl' / -- where fracture filters in z-direction, ARRFRACT2 = 1, where not - 0 [for layers 139-160]
+
+INCLUDE
 'MULTS.inc' / -- MULTS
 
 BOX
@@ -124,6 +127,7 @@ SIGMAV(,,1:115) = ARRSIGMA * SIGMAV
 PERMX(,,116:230) = 3*PERMX
 PORO(,,116:230) = 0.01
 NTG(,,160:230) = (NTG==0)*((ARRFRACT==1)*1+(ARRFRACT!=1)*0)+(NTG!=0)*NTG
+NTG(,,139:160) = (NTG==0)*((ARRFRACT2==1)*1 +(ARRFRACT2!=1)*0)+(NTG!=0)*NTG
 /
 
 ARITHMETIC
