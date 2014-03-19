@@ -132,7 +132,6 @@ NTG(,,139:160) = (NTG==0)*((ARRFRACT2==1)*1 +(ARRFRACT2!=1)*0)+(NTG!=0)*NTG
 
 ARITHMETIC
 PERMZ(19:21,12:14,30:34) = (PERMX<5)*0 + (PERMX>=5)*PERMZ -- for well 2230
-PERMZ(1:3,14:16,144:148) = 0 -- for well 1020
 PERMX = PERMX * ARRKXFRAC 
 PERMY = PERMX
 /
@@ -142,7 +141,8 @@ NTG(,,33:56) = (ARRNOTCOLL<=0.85)*0 + NTG*(ARRNOTCOLL>0.85)
 NTG(,,148:171) = (ARRNOTCOLL<=0.85)*0 + NTG*(ARRNOTCOLL>0.85)-- убираем ЗОН в 2230 (в матрице и трещинах), так как по
 -- нижнему прослою - вероятнее всего ЗОН, и поэтому там мало, что фильтруется. 
 -- Тем более вода
-PERMZ(11:13,12:16,146:153) = 0 -- for 1041 and 1042
+KRW = 1
+KRW = ARRKRW * KRW
  /
 
 PROPS
