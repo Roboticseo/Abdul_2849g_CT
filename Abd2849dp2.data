@@ -147,6 +147,9 @@ NTG(,,148:171) = (ARRNOTCOLL<=0.85)*0 + NTG*(ARRNOTCOLL>0.85)-- убираем ЗОН в 22
 -- Тем более вода
 KRW = 1
 KRW = ARRKRW * KRW
+KRWR = 0.0547381 
+KRWR(,,116:230) = 0.05474
+KRWR = KRWR * ARRKRWR
  /
 
 PROPS
