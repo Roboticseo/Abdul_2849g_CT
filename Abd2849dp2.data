@@ -80,6 +80,10 @@ INCLUDE
 INCLUDE
 'MULTS.inc' / -- MULTS
 
+INCLUDE
+'GEOLDP/ARRNTG.grdecl' / -- cube that make zeros cells have minimal pressures (into 1-6 layers approx.)
+-- 1 - wherever, 0 - only into these cells
+
 BOX
 1	46	1	25	1	115
  /
@@ -138,8 +142,10 @@ ARITHMETIC
 PERMZ(19:21,12:14,30:34) = (PERMX<5)*0 + (PERMX>=5)*PERMZ -- for well 2230
 PERMX = PERMX * ARRKXFRAC 
 PERMX = 0.5 * PERMX
-PERMY = PERMX
 PERMZ = 0.5 * PERMZ
+PERMX = ARRPERM * PERMX
+PERMZ = ARRPERM * PERMZ
+PERMY = PERMX
 /
 
 ARITHMETIC
@@ -152,6 +158,8 @@ KRW = ARRKRW * KRW
 KRWR = 0.0547381 
 KRWR(,,116:230) = 0.05474
 KRWR = KRWR * ARRKRWR
+NTG = NTG * ARRNTG 
+NTG(15:18,15:20,124:149) = (NTG==0) * 1 + (NTG>0)*NTG -- for 1035 well
  /
 
 PROPS
