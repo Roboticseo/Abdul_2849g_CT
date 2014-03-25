@@ -80,6 +80,10 @@ INCLUDE
 INCLUDE
 'MULTS.inc' / -- MULTS
 
+INCLUDE
+'GEOLDP/ARRNTG.grdecl' / -- cube that make zeros cells have minimal pressures (into 1-6 layers approx.)
+-- 1 - wherever, 0 - only into these cells
+
 BOX
 1	46	1	25	1	115
  /
@@ -121,7 +125,7 @@ MULTPV(1:1,1:25,) = 100
 MULTPV(46:46,1:25,) = 100
 MULTPV(46:46,1:25,) = 100
 MULTPV(1:46,25:25,) = 100
-MULTPV(1:46,1:1,) = 100
+MULTPV(1:46,1:1,) = 1
 PCW(,,116:230) = 0
 SOWCR(,,116:230) = 0.1
 SWL(,,116:230) = 0.1
@@ -154,6 +158,7 @@ KRW = ARRKRW * KRW
 KRWR = 0.0547381 
 KRWR(,,116:230) = 0.05474
 KRWR = KRWR * ARRKRWR
+NTG = NTG * ARRNTG 
  /
 
 PROPS

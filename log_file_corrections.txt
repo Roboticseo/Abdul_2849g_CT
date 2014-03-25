@@ -1,56 +1,19 @@
---- C:/Users/SazonovEO/AppData/Local/Temp/CE5jBe_Abd2849dp2.data	Tue Mar 25 12:28:52 2014
-+++ D:/BN_work/02_2014/Abdul_2849g/model/Abd2849dp2.data	Tue Mar 25 11:59:53 2014
-@@ -80,6 +80,10 @@
- INCLUDE
- 'MULTS.inc' / -- MULTS
- 
-+INCLUDE
-+'GEOLDP/ARRNTG.grdecl' / -- cube that make zeros cells have minimal pressures (into 1-6 layers approx.)
-+-- 1 - wherever, 0 - only into these cells
-+
- BOX
- 1	46	1	25	1	115
-  /
-@@ -138,8 +142,10 @@
- PERMZ(19:21,12:14,30:34) = (PERMX<5)*0 + (PERMX>=5)*PERMZ -- for well 2230
- PERMX = PERMX * ARRKXFRAC 
- PERMX = 0.5 * PERMX
--PERMY = PERMX
- PERMZ = 0.5 * PERMZ
-+PERMX = ARRPERM * PERMX
-+PERMZ = ARRPERM * PERMZ
-+PERMY = PERMX
- /
- 
- ARITHMETIC
-@@ -152,6 +158,8 @@
- KRWR = 0.0547381 
+--- D:/BN_work/02_2014/Abdul_2849g/model/Abd2849dp2.data	Tue Mar 25 11:59:53 2014
++++ D:/BN_work/02_2014/Abdul_2849g/model/Abd2849dp3.data	Tue Mar 25 13:34:44 2014
+@@ -125,7 +125,7 @@
+ MULTPV(46:46,1:25,) = 100
+ MULTPV(46:46,1:25,) = 100
+ MULTPV(1:46,25:25,) = 100
+-MULTPV(1:46,1:1,) = 100
++MULTPV(1:46,1:1,) = 1
+ PCW(,,116:230) = 0
+ SOWCR(,,116:230) = 0.1
+ SWL(,,116:230) = 0.1
+@@ -159,7 +159,6 @@
  KRWR(,,116:230) = 0.05474
  KRWR = KRWR * ARRKRWR
-+NTG = NTG * ARRNTG 
-+NTG(15:18,15:20,124:149) = (NTG==0) * 1 + (NTG>0)*NTG -- for 1035 well
+ NTG = NTG * ARRNTG 
+-NTG(15:18,15:20,124:149) = (NTG==0) * 1 + (NTG>0)*NTG -- for 1035 well
   /
  
  PROPS
---- C:/Users/SazonovEO/AppData/Local/Temp/qqxkfa_perf.inc	Tue Mar 25 12:29:24 2014
-+++ D:/BN_work/02_2014/Abdul_2849g/model/INCLdp/perf.inc	Tue Mar 25 11:06:53 2014
-@@ -44,7 +44,7 @@
- 1042	01.11.1991	PERF	1456	1464	0.073	0	2	BOTH /	кумулятивный	вторичноевскрытиепослебурения	240	30	ПК-105
- 2230	01.08.2000	PERF	1359	1368	0.073	0	1	BOTH /	сверлящий	вторичноевскрытиепослебурения	180	20	ПКС-80a
- 2230	01.05.2007	PERF	1359	1368	0.073	0	3	BOTH /	СКО
--2230	01.10.2013	PERF	1359	1368	0.073	0	1	BOTH /	кумулятивный	повторноевскрытиепослебурения	10 отв/м = 90 отв
-+2230	01.10.2013	PERF	1359	1368	0.073	0	3	BOTH /	кумулятивный	повторноевскрытиепослебурения	10 отв/м = 90 отв
- 2231g	01.06.2000	PERF	1508	1705	0.073	0	1	BOTH /					
- 2346	01.10.2010	PERF	2018.5	2021.5	0.073	0	1	BOTH /	сверлящий	вторичноевскрытиепослебурения	30	0	ПС-112
- 2346	01.10.2010	PERF	2032.5	2034.5	0.073	0	1	BOTH /	сверлящий	вторичноевскрытиепослебурения	20	0	ПС-112
---- C:/Users/SazonovEO/AppData/Local/Temp/Pg9zfd_MULTS.inc	Tue Mar 25 12:31:13 2014
-+++ D:/BN_work/02_2014/Abdul_2849g/model/MULTS.inc	Tue Mar 25 12:08:37 2014
-@@ -1,7 +1,7 @@
- ARITHMETIC
- ARRMPORO	=0
- ARRMPORO(,,1:115)=ARRMPORO + 1*block(8852.66675, 22482.39925)	
--ARRMPORO(,,1:115)=ARRMPORO + 1*block(9492.804, 22467.42325)	
-+ARRMPORO(,,1:115)=ARRMPORO + 0.8*block(9492.804, 22467.42325)	
- ARRMPORO(,,1:115)=ARRMPORO + 1*block(9851.175, 22427.796)	
- ARRMPORO(,,1:115)=ARRMPORO + 1*block(8193.1785, 24341.18225)	
- ARRMPORO(,,1:115)=ARRMPORO + 1*block(8628.1535, 24237.27625)	
