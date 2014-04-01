@@ -1,0 +1,21 @@
+DATES
+ 05 'JAN' 1972 /
+/
+
+WPIMULT
+'5ERM' 12 3* 1 27 /
+'5ERM' 3 3* 28 54 /
+/
+
+DATES
+ 15 'MAR' 1977 /
+/
+
+WPIMULT
+'5ERM' 12 3* 1 27 /
+'5ERM' 3 3* 28 54 /
+/
+
+DATES
+ 1 'APR' 1977 /
+/
